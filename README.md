@@ -1,5 +1,5 @@
 # SceneFactor: Factored Latent 3D Diffusion for Controllable 3D Scene Generation
-### [Project Page](https://alexeybokhovkin.github.io/scenefactor/) | [Paper](http://arxiv.org/abs/XXX) | [Video](https://youtu.be/wZqX09IFveA)
+### [Project Page](https://alexeybokhovkin.github.io/scenefactor/) | [Paper](http://arxiv.org/abs/2412.01801) | [Video](https://youtu.be/wZqX09IFveA)
 
 Official PyTorch implementation of the paper
 
