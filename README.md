@@ -13,6 +13,10 @@ Our factored semantic diffusion generates a proxy semantic space composed of sem
 
 <br>
 
+
+https://github.com/user-attachments/assets/ca466d81-c6a4-4975-a768-bbe23be71e27
+
+
 ### Source Code Coming Soon!
 
 ## Citation
