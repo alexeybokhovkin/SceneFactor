@@ -21,6 +21,6 @@ If you find our work useful in your research, please consider citing:
 	@misc{bokhovkin2024scenefactor,
 		title={SceneFactor: Factored Latent 3D Diffusion for Controllable 3D Scene Generation}, 
 		author={Bokhovkin, Alexey and Meng, Quan and Tulsiani, Shubham and Dai, Angela},
-		journal={arXiv preprint arXiv:XXX},
+		journal={arXiv preprint arXiv:2412.01801},
 		year={2024}
 	}
