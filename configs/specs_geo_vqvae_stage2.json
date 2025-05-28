@@ -1,0 +1,26 @@
+{
+    "Description" : "training VQVAE model for modulating SDF grids on the 3DFRONT dataset",
+    "TrainSplit" : "<path to training samples file>",
+    "TestSplit" : "<path to validation/test samples file>",
+
+    "training_task": "modulation",
+
+    "sdf_lr" : 2e-4,
+
+    "ddconfig": {
+        "double_z" : 0,
+        "z_channels" : 1,
+        "resolution" : 128,
+        "in_channels" : 1,
+        "out_ch" : 1,
+        "ch" : 16,
+        "ch_mult" : [1,2,2],
+        "num_res_blocks" : 1,
+        "attn_resolutions" : [],
+        "dropout" : 0.0
+    },
+
+    "embed_dim" : 1,
+    "n_embed" : 8192
+}
+

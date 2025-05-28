@@ -1,0 +1,28 @@
+{
+    "Description" : "training VQVAE model for modulating one-hot semantics on 3D-FRONT dataset",
+    "TrainSplit" : "<path to training samples file>",
+    "TestSplit" : "<path to validation/test samples file>",
+    
+    "training_task": "modulation",
+  
+    "sdf_lr" : 1e-4,
+
+    "ddconfig": {
+        "double_z" : 0,
+        "z_channels" : 1,
+        "resolution" : 16,
+        "in_channels" : 10,
+        "out_ch" : 10,
+        "ch" : 16,
+        "ch_mult" : [2,4],
+        "num_res_blocks" : 2,
+        "attn_resolutions" : [],
+        "dropout" : 0.0
+    },
+
+    "embed_dim" : 1,
+    "n_embed" : 8192
+}
+  
+  
+  

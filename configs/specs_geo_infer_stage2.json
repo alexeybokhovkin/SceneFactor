@@ -1,0 +1,69 @@
+{
+    "Description" : "inference geometric diffusion model",
+    "TrainSplit" : "<path to training samples file>",
+    "TestSplit" : "<path to validation/test samples file, inference chunks>",
+    "RoomsPath" : "<path to inference chunks with captions per scene>",
+    "SemPath" : "<path to semantic scenes produced by semantic diffusion model>",
+
+    "modulation_ckpt_path" : "<path to geometric VQVAE checkpoint>",
+    "diffusion_ckpt_path" : "<path to geometric diffusion model checkpoint>",
+    "diffusion_ckpt_path_context" : "<path to geometric diffusion model encoder checkpoint>",
+
+    "training_task": "combined",
+  
+    "sdf_lr" : 1e-4,
+
+    "ddconfig": {
+        "double_z" : 0,
+        "z_channels" : 1,
+        "resolution" : 128,
+        "in_channels" : 1,
+        "out_ch" : 1,
+        "ch" : 16,
+        "ch_mult" : [1,2,2],
+        "num_res_blocks" : 1,
+        "attn_resolutions" : [],
+        "dropout" : 0.0
+    },
+
+    "embed_dim" : 1,
+    "n_embed" : 8192,
+
+    "cond_mode" : "sem",
+
+    "diff_lr" : 1e-5,
+    "num_epochs" : 1000,
+    "log_freq" : 5000,
+    "loss_freq" : 100,
+    "print_freq" : 10000,
+    "save_model" : true,
+
+    "diffusion_specs" : {
+      "timesteps" : 1000,
+      "sampling_timesteps" : 350,
+      "objective" : "pred_v",
+      "loss_type" : "l2",
+      "beta_schedule" : "cosine",
+      "noise_scale" : 1.0
+    },
+
+    "diffusion_model_specs" : {
+      "image_size": 16,
+      "in_channels": 1,
+      "out_channels": 1,
+      "model_channels": 96,
+      "num_res_blocks": 1,
+      "attention_resolutions": [2,4],
+      "channel_mult": [1,2,4,4],
+      "num_heads": 8,
+      "dims": 3,
+      "context_dim": 128,
+      "use_spatial_transformer": 1,
+      "dropout": 0.0,
+      "mode": "geo"
+    }
+
+}
+  
+  
+  

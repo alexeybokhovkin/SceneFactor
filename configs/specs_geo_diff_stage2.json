@@ -1,0 +1,40 @@
+{
+  "desc" : "training geometric diffusion model using saved latents",
+  "data_path" : "<path to the folder with stored latents>",
+  "train_split_file" : "<path to training samples file>",
+  "val_split_file" : "<path to validation/test samples file>",
+  "cond_path" : "<path to condition folder, captions>",
+  "cond_mode" : "refine",
+
+  "train_lr" : 1e-5,
+  "training_iters" : 8000001,
+  "save_and_sample_every" : 25000,
+  "print_freq" : 10000,
+  "save_model" : true,
+
+  "diffusion_specs" : {
+    "timesteps" : 1000,
+    "sampling_timesteps" : 350,
+    "objective" : "pred_v",
+    "loss_type" : "l2",
+    "noise_scale" : 1.0 
+  },
+
+  "model_specs" : {
+    "image_size": 16,
+    "in_channels": 1,
+    "out_channels": 1,
+    "model_channels": 96,
+    "num_res_blocks": 1,
+    "attention_resolutions": [4,2],
+    "channel_mult": [1,2,4,4],
+    "num_heads": 8,
+    "dims": 3,
+    "context_dim": 128,
+    "use_spatial_transformer": 1,
+    "dropout": 0.0,
+    "mode": "geo"
+  }
+
+}
+
