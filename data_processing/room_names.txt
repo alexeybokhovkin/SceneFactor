@@ -1,0 +1,23 @@
+terrace
+second bedroom
+bathroom
+equipment room
+kids room
+aisle
+living dining room
+corridor
+stairwell
+dining room
+laundry room
+storage room
+hallway
+master bedroom
+master bathroom
+library
+balcony
+kitchen
+cloak room
+bedroom
+living room
+other room
+second bathroom

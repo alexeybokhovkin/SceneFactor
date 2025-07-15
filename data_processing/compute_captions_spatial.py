@@ -530,7 +530,7 @@ def compute_caption(num_proc=1, proc=0, make_edits=0):
     # all_obj_ids = sorted([scene_id for scene_id in meta_data])
     # all_obj_ids = [x for i, x in enumerate(all_obj_ids) if i % num_proc == proc]
 
-    with open('/cluster/daidalos/abokhovkin/Front3D/room_names.txt', 'r') as fin:
+    with open('room_names.txt', 'r') as fin:
         all_possible_rooms = fin.readlines()
         all_possible_rooms = [x[:-1] for x in all_possible_rooms]
 
@@ -543,7 +543,7 @@ def compute_caption(num_proc=1, proc=0, make_edits=0):
             print(f"There is no scene data in this json file: {scene_id}")
             continue
 
-        FUTURE3D_METADATA = '/cluster/falas/abokhovkin/data/Front3D/manifold_3dfuture/model_info.json'
+        FUTURE3D_METADATA = 'model_info.json'
         with open(FUTURE3D_METADATA, 'r') as fin:
             future3d_metadata_ = json.load(fin)
         future3d_metadata = {}

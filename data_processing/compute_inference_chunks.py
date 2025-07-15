@@ -59,7 +59,7 @@ def compute_sdf_chunk(vertices, faces, num_voxels, chunk_size):
 
 def compute_chunks(num_proc=1, proc=0):
 
-    with open('/cluster/balar/abokhovkin/data/Front3D/val_scenes.txt', 'r') as fin:
+    with open('val_scenes.txt', 'r') as fin:
         lines = fin.readlines()
         target_scenes = [x[:-1] for x in lines]
 

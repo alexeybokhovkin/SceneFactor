@@ -61,7 +61,7 @@ def compute_chunks(num_proc=1, proc=0):
     all_obj_ids = sorted(os.listdir(FRONT3DMESHESMANIFOLD))[:]
     all_obj_ids = [x for i, x in enumerate(all_obj_ids) if i % num_proc == proc]
 
-    with open('/cluster/balar/abokhovkin/data/Front3D/valid_scenes.json', 'r') as fin:
+    with open('valid_scenes.json', 'r') as fin:
         valid_scenes = json.load(fin)['valid_scenes']
 
     chunk_size = 3.8
@@ -286,6 +286,7 @@ def compute_chunks(num_proc=1, proc=0):
                     np.save(os.path.join(LOCAL_SAVEDIR, f'{index_filename}_semantic.npy'), all_voxel_distribution_sem)
                     np.save(os.path.join(LOCAL_SAVEDIR, f'{index_filename}_instance.npy'), all_voxel_distribution_inst)
                     np.save(os.path.join(LOCAL_SAVEDIR, f'{index_filename}_canonic.npy'), all_canonic_distribution)
+                    
                     # np.save(os.path.join(LOCAL_SAVEDIR, f'{index_filename}_scene_pts.npy'), scene_pts_chunk.astype('float16'))
                     # np.save(os.path.join(LOCAL_SAVEDIR, f'{index_filename}_furniture_pts.npy'), furniture_pts_chunk.astype('float16'))
 
