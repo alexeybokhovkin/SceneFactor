@@ -217,7 +217,38 @@ Before editing execute steps 7, 8a, 8b, 9a to generate semantic and geometric sc
 
 ## Checkpoints
 
-Will be added soon!
+We provide pretrained checkpoints for both geometric generation options.
+
+### One-stage geometry stage (option 1)
+
+#### VQ-VAE checkpoints
+
+- [Semantic VQ-VAE](https://kaldir.vc.in.tum.de/scenefactor/sem_vqvae.ckpt)
+- [Geometric VQ-VAE](https://kaldir.vc.in.tum.de/scenefactor/geo_vqvae_onestage.ckpt)
+
+#### Diffusion checkpoints
+
+- [Semantic conditioner model for diffusion](https://kaldir.vc.in.tum.de/scenefactor/sem_diff_encoder.ckpt)
+- [Semantic LDM](https://kaldir.vc.in.tum.de/scenefactor/sem_diff_main.ckpt)
+- [Geometric conditioner model for diffusion](https://kaldir.vc.in.tum.de/scenefactor/geo_diff_encoder_onestage.ckpt)
+- [Geometric LDM](https://kaldir.vc.in.tum.de/scenefactor/geo_diff_main_onestage.ckpt)
+
+### Two-stage geometry stage (option 2)
+
+#### VQ-VAE checkpoints
+
+- [Semantic VQ-VAE](https://kaldir.vc.in.tum.de/scenefactor/sem_vqvae.ckpt)
+- [Geometric VQ-VAE, stage 1](https://kaldir.vc.in.tum.de/scenefactor/geo_vqvae_stage1.ckpt)
+- [Geometric VQ-VAE, stage 2](https://kaldir.vc.in.tum.de/scenefactor/geo_vqvae_stage2.ckpt)
+
+#### Diffusion checkpoints
+
+- [Semantic conditioner model for diffusion](https://kaldir.vc.in.tum.de/scenefactor/sem_diff_encoder.ckpt)
+- [Semantic LDM](https://kaldir.vc.in.tum.de/scenefactor/sem_diff_main.ckpt)
+- [Geometric conditioner model for diffusion, stage 1](https://kaldir.vc.in.tum.de/scenefactor/geo_diff_encoder_stage1.ckpt)
+- [Geometric LDM, stage 1](https://kaldir.vc.in.tum.de/scenefactor/geo_diff_main_stage1.ckpt)
+- [Geometric conditioner model for diffusion, stage 2](https://kaldir.vc.in.tum.de/scenefactor/geo_diff_encoder_stage2.ckpt)
+- [Geometric LDM, stage 2](https://kaldir.vc.in.tum.de/scenefactor/geo_diff_main_stage2.ckpt)
 
 
 ## Citation
